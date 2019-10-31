@@ -72,12 +72,12 @@ $ads = [
 
         <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
         <? if ($is_auth==1): ?>
-                <div class="user-menu__logged">
-            <p><?= $user_name; ?></p>
-            <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
-            <a class="user-menu__logout" href="#">Выход</a>
+            <div class="user-menu__logged">
+                <p><?= $user_name; ?></p>
+                <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
+                <a class="user-menu__logout" href="#">Выход</a>
           </div>
-        <?php else: ?>
+        <? else: ?>
             <ul class="user-menu__list">
                 <li class="user-menu__item">
                     <a href="#">Регистрация</a>
@@ -122,7 +122,7 @@ $ads = [
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
-                                <span class="lot__cost"><?= $item ['price']; ?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?= $item['price']; ?><b class="rub">р</b></span>
                             </div>
                             <div class="lot__timer timer">
                                 12:23
