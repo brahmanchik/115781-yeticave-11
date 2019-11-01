@@ -1,4 +1,15 @@
-<?php
+<?
+
+function num_format($input)
+{
+    $price = ceil($input);
+    $price = number_format($price, 0, ' ', ' ');
+    $price = $price . "<b class=\"rub\">р</b>";
+    return $price;
+}
+
+
+
 $is_auth = rand(0, 1);
 
 $user_name = 'Тарасов Дмитрий'; // укажите здесь ваше имя
@@ -44,6 +55,9 @@ $ads = [
     ]
 
 ]
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -122,7 +136,7 @@ $ads = [
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
-                                <span class="lot__cost"><?= $item['price']; ?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?= num_format($item['price']); ?></span>
                             </div>
                             <div class="lot__timer timer">
                                 12:23
