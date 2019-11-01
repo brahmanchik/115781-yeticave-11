@@ -2,17 +2,9 @@
 
 function num_format($input)
 {
-    $price=ceil($input);
-    
-   if ($price>=1000){
-       $price=number_format($price, 2, ' ', ' ');
-       $price= $price . "<b class=\"rub\">р</b>";
-        
-   }
-   else {
-       $price=$input;
-       $price= $price . "<b class=\"rub\">р</b>";
-   }
+    $price = ceil($input);
+    $price = number_format($price, 2, ' ', ' ');
+    $price = $price . "<b class=\"rub\">р</b>";
     return $price;
 }
 
