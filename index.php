@@ -3,7 +3,7 @@
 function num_format($input)
 {
     $price = ceil($input);
-    $price = number_format($price, 2, ' ', ' ');
+    $price = number_format($price, 0, ' ', ' ');
     $price = $price . "<b class=\"rub\">р</b>";
     return $price;
 }
